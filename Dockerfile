@@ -84,6 +84,9 @@ EXPOSE 7600 7800 7843 9483
 USER aceuser
 
 WORKDIR /home/aceuser
+
+RUN mkdir /home/aceuser/bars && chown aceuser:aceuser /home/aceuser/bars
+
 RUN mkdir /home/aceuser/initial-config && chown aceuser:aceuser /home/aceuser/initial-config
 
 ENV LOG_FORMAT=basic

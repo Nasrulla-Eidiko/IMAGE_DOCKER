@@ -14,7 +14,7 @@ RUN go test -v ./cmd/runaceserver/
 RUN go test -v ./internal/...
 RUN go vet ./cmd/... ./internal/...
 
-ARG ACE_INSTALL=ace-11.0.0.2.tar.gz
+ARG ACE_INSTALL=11.0.0.6-ACE-LINUX64-DEVELOP.tar.gz
 WORKDIR /opt/ibm
 COPY deps/$ACE_INSTALL .
 RUN mkdir ace-11

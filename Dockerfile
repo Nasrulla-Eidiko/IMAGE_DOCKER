@@ -1,4 +1,4 @@
-FROM ace-de-only:latest
+FROM ace-dev-only:latest
 
 
 COPY sample/bars_aceonly /home/aceuser/bars

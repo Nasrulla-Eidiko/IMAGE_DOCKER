@@ -86,6 +86,9 @@ USER aceuser
 WORKDIR /home/aceuser
 RUN mkdir /home/aceuser/initial-config && chown aceuser:aceuser /home/aceuser/initial-config
 
+WORKDIR /home/aceuser/bars
+RUN mkdir /home/aceuser/bars && chown aceuser:aceuser /home/aceuser/bars
+
 ENV LOG_FORMAT=basic
 
 # Set entrypoint to run management script

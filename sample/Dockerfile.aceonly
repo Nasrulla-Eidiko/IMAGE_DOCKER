@@ -1,4 +1,5 @@
 FROM ace-dev-only:latest
 
 ADD sample/bars_aceonly /home/aceuser/bars
-RUN ace_compile_bars.sh
+RUN if [ -z "$MQSI_VERSION" ]; then RUN ["source /opt/ibm/ace-11/server/bin/mqsiprofile"]; fi
+RUN if ls /home/aceuser/bars/*.bar >/dev/null 2>&1; then RUN for bar in /home/aceuser/bars/*.bar; do mqsibar -a $bar -w /home/aceuser/ace-server; done; fi

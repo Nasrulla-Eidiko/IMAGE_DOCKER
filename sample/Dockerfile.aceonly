@@ -1,4 +1,4 @@
 FROM ace-dev-only:latest
 
 COPY sample/bars_aceonly /home/aceuser/bars
-RUN ace_compile_bars.sh
+#RUN ace_compile_bars.sh

@@ -1,4 +1,8 @@
 FROM ace-dev-only:latest
 
+USER root
+
+RUN mkdir /home/aceuser/bars && chown aceuser:aceuser /home/aceuser/bars
+chmod -R 777 /home/aceuser/bars
 COPY sample/bars_aceonly /home/aceuser/bars
 RUN ace_compile_bars.sh
